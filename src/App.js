@@ -26,34 +26,12 @@ function App() {
   return (
     <div className="App">
         <h1>Nasa Photo of the Day!</h1>
-        {/* <Title {title}> */}
-      <Image image={photo}
-               />
-          {/* <div className="entry">
-            {nasaData.map((dhurl, index) => {
-              return 
-              <SelectDate date={index} />
-           
-                 })}
-          </div> */
+      
+      <Image image={photo} />
     </div>
-  )}
+
+  );
+  }
+  
 
 export default App;
-
-
-  {/* // <button onClick={() => setPhoto("nasa_img")}>Nasa Images</button>
-
-  // title={nasaData.image.title}
-  // dhurl={nasaData.dhurl}> */}
-
-{/* 
-//     {/* <Title {title}> */}
-{/* //     <Image image={photo} */}
-          {/* <div className="entry">
-//             {nasaData.map((dhurl, index) => {
-//               return 
-//               <SelectDate date={index} />
-           
-//                  })}
-//           </div> */ 
