@@ -11,7 +11,6 @@ function App() {
         axios.get(`https://api.nasa.gov/planetary/apod?api_key=ZWeqLrfDAmdeg9wbb0ACuutsgVNuc3W4W15QaWkT`)
         .then(response => {
             console.log(response.data);
-            setNasaData(response.data);
             setPhoto(response.data.url);
         })
         .catch(error => {
@@ -23,7 +22,7 @@ function App() {
   return (
     <div className="App">
         <h1>Nasa Photo of the Day!</h1>
-      <Image photo={photo}/>
+      <Image image={photo}/>
           <div className="entry">
                 {nasaData.map((dhurl, index) => {
                   return <Image
