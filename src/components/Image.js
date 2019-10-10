@@ -1,9 +1,9 @@
 import React from "react";
 
-const Image = ({props}) {
+const Image = props => {
     return (
-        <img src={props.image}/>
+        <img className="nasa_img" alt="nasa pics"
+            src={ cimage}/>
     )
-};
-
+}
 export default Image;
