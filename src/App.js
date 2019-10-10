@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Image from "../src/components/Image";
+import SelectDate from "../src/components/SelectDate";
+import nasaData from "../src/components/nasaData";
+import Title from "../src/components/Title";
 
 function App() {
   const [nasaData, setNasaData] = useState([]);
@@ -12,6 +15,7 @@ function App() {
         .then(response => {
             console.log(response.data);
             setPhoto(response.data.url);
+            setNasaData(response.data);
         })
         .catch(error => {
             console.log("Check for errors:", error);
@@ -22,18 +26,34 @@ function App() {
   return (
     <div className="App">
         <h1>Nasa Photo of the Day!</h1>
-      <Image image={photo}/>
-          <div className="entry">
-                {nasaData.map((dhurl, index) => {
-                  return <Image
-          
-                    title={nasaData.image.title}
-                    dhurl={nasaData.dhurl}
-                    />
-              // <button onClick={() => setPhoto("nasa_img")}>Nasa Images</button>
+        {/* <Title {title}> */}
+      <Image image={photo}
+               />
+          {/* <div className="entry">
+            {nasaData.map((dhurl, index) => {
+              return 
+              <SelectDate date={index} />
+           
                  })}
-          </div>
-        </div>
+          </div> */
+    </div>
   )}
 
 export default App;
+
+
+  {/* // <button onClick={() => setPhoto("nasa_img")}>Nasa Images</button>
+
+  // title={nasaData.image.title}
+  // dhurl={nasaData.dhurl}> */}
+
+{/* 
+//     {/* <Title {title}> */}
+{/* //     <Image image={photo} */}
+          {/* <div className="entry">
+//             {nasaData.map((dhurl, index) => {
+//               return 
+//               <SelectDate date={index} />
+           
+//                  })}
+//           </div> */ 
