@@ -8,19 +8,25 @@ const TextStyles = styled.div`
     border-radius: 15px;
     border: 4px solid #5b5b5c;
     box-shadow: 10px 10px 5px grey;
-    height: 40vh;
-    line-height: 1.4rem;
+    line-height: 2rem;
 `;
-
+const HoverStyle = styled.h2`
+  ${TextStyles}:hover & {
+    color: #deda9b;
+  }
+`;
 
 const Title = (props) => {
     return (
       <TextStyles>
         <div>
-          <h2>{props.title}</h2>
-          <h3>{props.date}</h3>
-          <p>{props.explanation}</p>
-        </div>
+          <HoverStyle>
+              <h2>{props.title}</h2>
+                </HoverStyle>
+                  <h3>{props.date}</h3>
+                    <p>{props.explanation}</p>
+                  <p>Copyright: {props.copyright}</p>
+                </div>
         </TextStyles>
     )
 }

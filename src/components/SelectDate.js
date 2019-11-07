@@ -1,14 +1,34 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
+import styled from 'styled-components';
 
-// const SelectDate = (props) => {
-//     const [startDate, setStartDate] = useState("2019-11-07");
+const DateStyles = styled.h3`
+    font-size: 1.4rem;
+    color: navy;
+`;
 
-//     return (
-//         <div className="dateContainer">
-//             <h3>Select Date</h3>
-//             <input className="select-date" type="date" value={props.startDate} />
-//             <button onClick={select}>Submit</button>
-//         </div>
-//     );
-// };
-// export default SelectDate;
+const SelectStyles = styled.div`
+    padding-bottom: 30px;
+`;
+
+const BtnStyles = styled.button`
+`;
+
+
+const SelectDate = (props) => {
+    const [startDate] = useState("2019-11-07");
+
+    return (
+        <div className="dateContainer">
+            <DateStyles>
+                <h3>Select Date</h3>
+            </DateStyles>
+                    
+            <SelectStyles>
+                <input className="select-date" type="date" value={props.startDate} />
+            <BtnStyles>
+                 <button onClick={startDate.select}>Submit</button></BtnStyles>
+            </SelectStyles>
+        </div>
+    );
+};
+export default SelectDate;
