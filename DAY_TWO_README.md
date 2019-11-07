@@ -6,8 +6,7 @@ In this project you will refactor the styling you completed in the APOD app. You
 
 ---
 
-Read these instructions carefully. Understand exactly what is expected before starting this project.
-
+Read these instructions carefully. Understand exactly what is expected before starting this project
 ## Commits
 
 Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
