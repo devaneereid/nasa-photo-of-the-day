@@ -5,7 +5,6 @@ import Image from "../src/components/Image";
 import Title from "../src/components/Title";
 
 function App() {
-  // const [nasaData, setNasaData] = useState([]);
   const [photo, setPhoto] = useState([]);
   const [header, setTitle] = useState([]);
   
@@ -23,18 +22,18 @@ function App() {
 
   return (
     <div className="App">   
-        <h1>Nasa Photo of the Day!</h1>
-     <>
-          <Image image= {photo} 
-          title={photo.title} 
-          explanation={photo.explanation} />
-          </>
-          <>
-          <Title title={header.title} 
-          explanation={header.explanation}/>
+        <h1>Nasa Photo of the Day <span role="img" aria-label="rocket">🚀</span> !</h1>
+            <>
+          <Image image= {photo} />
+            </>
+            <>
+          <Title title= {header.title} 
+          date= {header.date}
+          explanation= {header.explanation}/>
           </>
        </div>
     );
   }
+  
   
 export default App;

@@ -31,3 +31,18 @@
     transform: rotate(360deg);
   }
 }
+div.App {
+  padding: 25px;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+  border-radius: 15px;
+}
+
+p {
+  text-align: start;
+  padding: 20px 20%;
+  font-size: 1rem;
+}
